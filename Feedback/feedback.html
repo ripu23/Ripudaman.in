@@ -1,0 +1,68 @@
+<!--
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<style>
+    .jumbotron {
+        background: #358CCE;
+        color: #FFF;
+        border-radius: 0px;
+    }
+
+    .jumbotron-sm {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .jumbotron small {
+        color: #FFF;
+    }
+
+    .h1 small {
+        font-size: 24px;
+    }
+
+</style>
+-->
+
+<div class="card text-center">
+<div class="card-header">
+    
+                <h1 class="h1">
+                   <small >Your feedback is always appreciated</small></h1>
+</div>
+</div>
+
+<div class="card-body">
+            
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">
+                                Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name" ng-model= "feedback.name"required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                                Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model= "feedback.email" required="required" /></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">
+                                Message</label>
+                                <textarea name="message" id="message" class="form-control" rows="9" cols="25" ng-model= "feedback.message" required="required" placeholder="Type your message here"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary pull-right" id="sendMessage" ng-click="sendFeedback();">
+                            Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>

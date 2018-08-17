@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div ng-app="feedbackapp" ng-controller="FeedbackController">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="feedback in feedbacks">{{feedback}}
+                    <td>{{feedback.id}}</td>
+                    <td>{{feedback.name}}</td>
+                    <td>{{feedback.email}}</td>
+                    <td>{{feedback.message}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="../controllers/FeedbackController.js"></script>
+</body>
+    
+</html>

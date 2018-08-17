@@ -1,0 +1,97 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<style>
+    .modal.fade .modal-dialog {
+        transform: none
+    }
+
+    #search {
+        float: right;
+        margin-top: 9px;
+        width: 250px;
+    }
+
+    .search {
+        padding: 5px 0;
+        width: 230px;
+        height: 30px;
+        position: relative;
+        left: 10px;
+        float: left;
+        line-height: 22px;
+    }
+
+    .search input {
+        position: absolute;
+        width: 0px;
+        float: Left;
+        margin-left: 210px;
+        -webkit-transition: all 0.7s ease-in-out;
+        -moz-transition: all 0.7s ease-in-out;
+        -o-transition: all 0.7s ease-in-out;
+        transition: all 0.7s ease-in-out;
+        height: 30px;
+        line-height: 18px;
+        padding: 0 2px 0 2px;
+        border-radius: 1px;
+    }
+
+    .search:hover input,
+    .search input:focus {
+        width: 200px;
+        margin-left: 0px;
+    }
+
+    .btnChange {
+        height: 30px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        border-radius: 1px;
+    }
+
+</style>
+
+<body>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Dictionary!</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <div class="container">
+                <div class="row">
+                    <div class="search">
+                        <input type="text" class="form-control input-sm" maxlength="64" ng-model="searchWord" placeholder="Search" />
+                        <button type="submit" ng-click="search(searchWord);" class="btn btn-primary btn-sm btnChange">Search</button>
+
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-md-6 column">
+                        <table class="table table-striped" ">
+							<thead>
+								<tr>
+									<th>Meanings</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr ng-repeat="x in meanings ">
+									<td>{{x}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				</div>
+		</div>
+		<div class="modal-footer ">
+			<button class="btn btn-info " type="button " ng-click="Close() ">Close</button>
+		</div>
+
+	</div>
+</body>
